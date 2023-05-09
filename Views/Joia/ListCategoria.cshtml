@@ -1,0 +1,24 @@
+﻿@model JoiaListViewModel
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+    <h4>@ViewData["Data"]</h4>
+</div>
+<h3>@ViewData["Categoria"]</h3>
+
+<hr />
+
+<div class="conteiner">
+    <div class="row">
+        @foreach (var joia in Model.Joias)
+        {
+            <partial name="_JoiasResumo" for="@joia" />
+        }
+
+
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿@model Joia
+
+<div class="col-sm-4 col-md-4 col-lg-4">
+    <p><img class="img-thumbnail img-fluid" src="~/images/@Model.ImgURL" style="height: 250px; width: 450px;" /></p>
+    <h3>@Model.Preco.ToString("c")</h3>
+
+    <h4>
+        <p>@Model.Nome&nbsp&nbsp;<a asp-controller="Joia" asp-action="Details" asp-route-joiaId="@Model.JoiaId" class="btn btn-sm btn-outline-warning"> + </a></p>
+    </h4>
+
+    <p>@Model.DescricaoCurta</p>
+
+    <div>
+        <p class="button">
+            <a class="btn btn-success" id="cartButton" asp-controller="CarrinhoCompra"
+               asp-action="AdicionarItemNoCarrinhoCompra" asp-route-JoiaId="@Model.JoiaId">
+                Incluir
+            </a>
+        </p>
+    </div>
+
+
+</div>
+<br />
